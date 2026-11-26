@@ -1,4 +1,6 @@
-/* Reinicio básico */
+/* ====================================
+   REINICIO GENERAL
+==================================== */
 
 *{
     margin: 0;
@@ -6,133 +8,243 @@
     box-sizing: border-box;
 }
 
-/* Colores principales */
+/* ====================================
+   ESTILOS GENERALES
+==================================== */
 
 body{
     background-color: #0f0f0f;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
-/* Header */
+/* ====================================
+   HEADER
+==================================== */
 
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 40px;
+    background-color: #111;
 }
 
-/* Logo */
+/* Logo del menú */
 
 .logo{
     color: #c9a15c;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: bold;
 }
 
-/* Menú */
+/* ====================================
+   MENÚ
+==================================== */
 
 .menu ul{
-    list-style: none;
     display: flex;
-    gap: 20px;
+    list-style: none;
+    gap: 25px;
 }
 
 .menu a{
     color: white;
     text-decoration: none;
+    transition: 0.3s;
 }
 
-/* Hero */
+.menu a:hover{
+    color: #c9a15c;
+}
+
+/* Botón hamburguesa */
+
+.hamburguesa{
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* ====================================
+   HERO
+==================================== */
 
 .hero{
     text-align: center;
     padding: 80px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Logo principal */
+
+.logo-principal{
+    width: 250px;
+    border-radius: 15px;
+    margin-bottom: 25px;
 }
 
 .hero h1{
     color: #c9a15c;
+    font-size: 3rem;
     margin-bottom: 20px;
 }
+
+.hero p{
+    margin-bottom: 15px;
+}
+
+/* Eslogan */
+
+.eslogan{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* ====================================
+   BOTÓN
+==================================== */
 
 .boton{
     display: inline-block;
     margin-top: 20px;
-    padding: 12px 25px;
+    padding: 12px 30px;
     background-color: #c9a15c;
     color: black;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: bold;
 }
 
-/* Cards */
-
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 30px;
+.boton:hover{
+    background-color: #e0bb75;
+    transform: translateY(-3px);
 }
 
-.card{
-    width: 300px;
-    background: #1b1b1b;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: .3s;
-}
-
-.card:hover{
-    transform: translateY(-5px);
-}
-
-.card img{
-    width: 100%;
-}
-
-.card h3,
-.card p{
-    padding: 10px;
-}
-.logo-principal{
-    width: 250px;
-    margin-top: 20px;
-}
+/* ====================================
+   TRABAJOS DESTACADOS
+==================================== */
 
 .destacados{
-    padding: 50px 20px;
+    padding: 60px 20px;
     text-align: center;
 }
 
+.destacados h2{
+    color: #c9a15c;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* ====================================
+   CARDS
+==================================== */
+
 .cards{
     display: flex;
-    gap: 20px;
     justify-content: center;
+    gap: 25px;
     flex-wrap: wrap;
-    margin-top: 30px;
 }
 
 .card{
     width: 300px;
     background-color: #1b1b1b;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
     transition: 0.3s;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
 }
 
 .card:hover{
-    transform: translateY(-5px);
+    transform: translateY(-8px);
 }
+
+/* Imagen de tarjeta */
 
 .card img{
     width: 100%;
+    height: 300px;
+    object-fit: cover;
     display: block;
 }
 
-.card h3,
+/* Contenido */
+
+.card h3{
+    padding: 15px 10px 10px;
+    color: #c9a15c;
+}
+
 .card p{
-    padding: 10px;
+    padding: 0 10px 20px;
+}
+
+/* ====================================
+   FOOTER
+==================================== */
+
+.footer{
+    text-align: center;
+    padding: 30px;
+    background-color: #111;
+    margin-top: 50px;
+}
+
+/* ====================================
+   RESPONSIVE
+==================================== */
+
+@media(max-width: 701px){
+
+    .header{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1{
+        font-size: 2.5rem;
+    }
+
+    .logo-principal{
+        width: 200px;
+    }
+}
+
+@media(max-width: 501px){
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .logo-principal{
+        width: 160px;
+    }
+
+    .card{
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+/* ====================================
+   BENEFICIOS
+==================================== */
+
+.beneficios{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.beneficios h2{
+    color: #c9a15c;
+    margin-bottom: 30px;
+    font-size: 2rem;
 }
