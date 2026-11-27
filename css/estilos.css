@@ -248,3 +248,385 @@ body{
     margin-bottom: 30px;
     font-size: 2rem;
 }
+/* ====================================
+   SERVICIOS HOME
+==================================== */
+
+.servicios-home{
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.servicios-home h2{
+    color: #c9a15c;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* ====================================
+   CONTACTO HOME
+==================================== */
+
+.contacto-home{
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #1b1b1b;
+}
+
+.contacto-home h2{
+    color: #c9a15c;
+    margin-bottom: 20px;
+}
+
+.contacto-home p{
+    margin-bottom: 20px;
+}
+
+/* ====================================
+   LOGO EN EL MENÚ
+==================================== */
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-menu{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* ====================================
+   MEJORAS EN LAS TARJETAS
+==================================== */
+
+.card{
+    width: 300px;
+    background-color: #1b1b1b;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,.4);
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(201,161,92,.3);
+}
+
+.card img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ====================================
+   MENÚ MÓVIL
+==================================== */
+
+.menu.activo{
+    display: flex;
+}
+
+/* ====================================
+   TABLET
+==================================== */
+
+@media(max-width:701px){
+
+    .hamburguesa{
+        display: block;
+    }
+
+    .header{
+        flex-wrap: wrap;
+    }
+
+    .menu{
+        width: 100%;
+        display: none;
+        margin-top: 15px;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .hero h1{
+        font-size: 2.5rem;
+    }
+
+    .logo-principal{
+        width: 200px;
+    }
+}
+
+/* ====================================
+   CELULAR
+==================================== */
+
+@media(max-width:501px){
+
+    .hero{
+        padding: 50px 15px;
+    }
+
+    .hero h1{
+        font-size: 2rem;
+    }
+
+    .logo-principal{
+        width: 160px;
+    }
+
+    .card{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .destacados h2,
+    .beneficios h2,
+    .servicios-home h2,
+    .contacto-home h2{
+        font-size: 1.7rem;
+    }
+}
+
+
+/* ====================================
+   FORMULARIO PREMIUM
+==================================== */
+
+.contacto-formulario{
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.contacto-formulario h2{
+    text-align: center;
+    color: #c9a15c;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.texto-formulario{
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.formulario{
+    background: #171717;
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(201,161,92,.25);
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formulario label{
+    color: #c9a15c;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea{
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background-color: #252525;
+    color: white;
+    font-size: 1rem;
+}
+
+.formulario textarea{
+    min-height: 180px;
+    resize: vertical;
+}
+
+.formulario button{
+    align-self: center;
+}
+
+.formulario:hover{
+    box-shadow: 0 0 25px rgba(201,161,92,.2);
+}
+
+/* ====================================
+   ZONA DE INSPIRACIÓN
+==================================== */
+
+.subida-diseno{
+    padding: 30px;
+    margin: 20px 0;
+
+    border: 2px dashed #c9a15c;
+    border-radius: 20px;
+
+    background-color: #202020;
+    text-align: center;
+}
+
+.subida-diseno h3{
+    color: #c9a15c;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.subida-diseno p{
+    margin-bottom: 20px;
+}
+
+.subida-diseno input[type="file"]{
+    width: 100%;
+    padding: 15px;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+}
+/* ====================================
+   EFECTO MÁS ELEGANTE
+==================================== */
+
+.formulario{
+    transition: .3s;
+}
+
+.formulario:hover{
+    box-shadow: 0 0 25px rgba(201,161,92,.2);
+}
+/* ====================================
+   HERO CONTACTO CON SLIDER
+==================================== */
+
+.hero-contacto{
+    position: relative;
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+/* Contenedor de imágenes */
+
+.slider-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* Imágenes */
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    transition: opacity 3s ease-in-out;
+
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.slide:nth-child(1){
+    background-image:
+    linear-gradient(
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.75)
+    ),
+    url("../img/hollow-knight.jpg");
+}
+
+.slide:nth-child(2){
+    background-image:
+    linear-gradient(
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.75)
+    ),
+    url("../img/harry-potter.jpg");
+}
+
+.slide:nth-child(3){
+    background-image:
+    linear-gradient(
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.75)
+    ),
+    url("../img/Akasa.png");
+}
+
+.slide.activo{
+    opacity: 1;
+}
+
+.overlay{
+    position: relative;
+    z-index: 10;
+
+    max-width: 900px;
+    padding: 20px;
+
+    text-align: center;
+}
+
+.hero-contacto h1{
+    font-size: 4rem;
+    color: #c9a15c;
+    margin-bottom: 20px;
+
+    text-shadow: 0 0 15px rgba(0,0,0,.8);
+}
+
+.hero-contacto p{
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+@media(max-width:701px){
+
+    .hero-contacto h1{
+        font-size: 3rem;
+    }
+
+}
+
+@media(max-width:501px){
+
+    .hero-contacto{
+        min-height: 70vh;
+    }
+
+    .hero-contacto h1{
+        font-size: 2rem;
+    }
+
+    .hero-contacto p{
+        font-size: 1rem;
+    }
+
+}
