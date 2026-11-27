@@ -5,64 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | NZ Atelier</title>
+
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
-    <header class="header">
-
-        <a href="index.html" class="logo">
-            <img src="img/logo.jpg" alt="Logo NZ Atelier" class="logo-menu">
-            NZ Atelier
-        </a>
-
-        <button class="hamburguesa" id="btnMenu">
-            ☰
-        </button>
-
-        <nav class="menu" id="menu">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-
-    </header>
+    <?php include("includes/header.php"); ?>
 
     <main>
 
-        <!-- HERO DE CONTACTO -->
+        <!-- HERO -->
 
         <section class="hero-contacto">
 
-    <div class="slider-bg">
+            <div class="slider-bg">
 
-        <div class="slide activo"></div>
-        <div class="slide"></div>
-        <div class="slide"></div>
+                <div class="slide activo"></div>
+                <div class="slide"></div>
+                <div class="slide"></div>
 
-    </div>
+            </div>
 
-    <div class="overlay">
+            <div class="overlay">
 
-        <h1>CONVIERTE TU IDEA EN UNA ALFOMBRA</h1>
+                <h1>CONVIERTE TU IDEA EN UNA ALFOMBRA</h1>
 
-        <p>
-            Personajes, videojuegos, anime o cualquier diseño
-            que imagines. Nosotros lo hacemos realidad.
-        </p>
+                <p>
+                    Personajes, videojuegos, anime o cualquier diseño
+                    que imagines. Nosotros lo hacemos realidad.
+                </p>
 
-        <a href="#pedido" class="boton">
-            Quiero mi diseño
-        </a>
+                <a href="#pedido" class="boton">
+                    Quiero mi diseño
+                </a>
 
-    </div>
+            </div>
 
-</section>
+        </section>
 
         <!-- PASOS -->
 
@@ -110,7 +90,15 @@
 
             <h2>Solicita tu Diseño Personalizado</h2>
 
-            <form class="formulario">
+            <p class="texto-formulario">
+                Comparte tu idea y la convertiremos en una pieza única.
+            </p>
+
+            <form
+                action="gracias.php"
+                method="POST"
+                enctype="multipart/form-data"
+                class="formulario">
 
                 <label for="nombre">
                     Nombre Completo
@@ -151,6 +139,10 @@
 
                 <select id="tema" name="tema">
 
+                    <option value="">
+                        Selecciona una opción
+                    </option>
+
                     <option>Anime</option>
 
                     <option>Videojuegos</option>
@@ -163,26 +155,27 @@
 
                 </select>
 
+                <!-- ZONA DE INSPIRACIÓN -->
+
+                <div class="subida-diseno">
+
+                    <h3>🎨 Muestra tu Inspiración</h3>
+
+                    <p>
+                        Adjunta una imagen para ayudarnos a comprender
+                        mejor tu diseño ideal.
+                    </p>
+
+                    <input
+                        type="file"
+                        id="imagen"
+                        name="imagen"
+                        accept=".jpg,.jpeg,.png,.webp">
+
+                </div>
+
                 <label for="mensaje">
-
-                    <div class="subida-diseno">
-
-    <h3>🎨 Muestra tu Inspiración</h3>
-
-    <p>
-        Puedes adjuntar una imagen de referencia para ayudarnos
-        a comprender mejor tu diseño ideal.
-    </p>
-
-    <input
-        type="file"
-        id="imagen"
-        name="imagen"
-        accept=".jpg,.jpeg,.png,.webp"
-    >
-
-</div>
-                    Describe tu idea
+                    Describe tu Idea
                 </label>
 
                 <textarea
@@ -265,17 +258,7 @@
 
     </main>
 
-    <footer class="footer">
-
-        <p>© 2026 NZ Atelier</p>
-
-        <p>
-            Alfombras & diseños personalizados con esencia artística.
-        </p>
-
-    </footer>
-
-    <script src="js/main.js"></script>
+    <?php include("includes/footer.php"); ?>
 
 </body>
 

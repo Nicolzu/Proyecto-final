@@ -10,37 +10,17 @@
 
 <body>
 
-    <!-- Encabezado -->
-    <header class="header">
-
-        <a href="index.html" class="logo">
-            <img src="img/logo.jpg" alt="Logo NZ Atelier" class="logo-menu">
-            NZ Atelier
-        </a>
-
-        <button class="hamburguesa" id="btnMenu">
-            ☰
-        </button>
-
-        <nav class="menu" id="menu">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-
-    </header>
+    <?php include("includes/header.php"); ?>
 
     <main>
 
         <!-- Hero -->
         <section class="hero">
 
-            <img src="img/logo.jpg"
-                 alt="Logo NZ Atelier"
-                 class="logo-principal">
+            <img
+                src="img/logo.jpg"
+                alt="Logo NZ Atelier"
+                class="logo-principal">
 
             <h1>Nuestros Servicios</h1>
 
@@ -50,7 +30,7 @@
 
         </section>
 
-        <!-- Servicios generados con JavaScript -->
+        <!-- Catálogo -->
         <section class="destacados">
 
             <h2>Catálogo de Diseños</h2>
@@ -61,6 +41,8 @@
             </p>
 
             <div class="cards" id="contenedorServicios">
+
+                <!-- Las tarjetas se generan desde JavaScript -->
 
             </div>
 
@@ -74,35 +56,47 @@
             <div class="cards">
 
                 <div class="card">
-                    <h3>1. Nos Compartes tu Idea</h3>
+
+                    <h3>1. Nos compartes tu idea</h3>
 
                     <p>
-                        Envíanos una imagen, personaje o inspiración.
+                        Envíanos una imagen, personaje, videojuego o
+                        cualquier inspiración.
                     </p>
+
                 </div>
 
                 <div class="card">
-                    <h3>2. Diseñamos la Propuesta</h3>
+
+                    <h3>2. Diseñamos la propuesta</h3>
 
                     <p>
-                        Evaluamos medidas, colores y materiales.
+                        Definimos medidas, materiales y acabados para
+                        crear una pieza única.
                     </p>
+
                 </div>
 
                 <div class="card">
-                    <h3>3. Fabricación Artesanal</h3>
+
+                    <h3>3. Fabricación artesanal</h3>
 
                     <p>
-                        Elaboramos tu alfombra cuidando cada detalle.
+                        Elaboramos tu alfombra cuidando cada detalle
+                        para obtener el mejor resultado.
                     </p>
+
                 </div>
 
                 <div class="card">
+
                     <h3>4. Entrega</h3>
 
                     <p>
-                        Recibe tu diseño personalizado listo para disfrutar.
+                        Recibe tu diseño personalizado listo para
+                        decorar tu espacio.
                     </p>
+
                 </div>
 
             </div>
@@ -110,17 +104,16 @@
         </section>
 
         <!-- Llamado a la acción -->
-
         <section class="contacto-home">
 
             <h2>¿Tienes una idea en mente?</h2>
 
             <p>
-                Convirtamos tu personaje favorito o diseño soñado
-                en una alfombra única.
+                Convirtamos tu personaje favorito, videojuego o diseño
+                soñado en una alfombra única.
             </p>
 
-            <a href="contacto.html" class="boton">
+            <a href="contacto.php" class="boton">
                 Solicitar Cotización
             </a>
 
@@ -128,17 +121,7 @@
 
     </main>
 
-    <footer class="footer">
-
-        <p>© 2026 NZ Atelier</p>
-
-        <p>
-            Alfombras y diseños personalizados
-        </p>
-
-    </footer>
-
-    <script src="js/servicios.js"></script>
+    <?php include("includes/footer.php"); ?>
 
 </body>
 

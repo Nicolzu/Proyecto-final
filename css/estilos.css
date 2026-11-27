@@ -630,3 +630,11 @@ body{
     }
 
 }
+
+.lightbox{
+    display: none;
+}
+
+.lightbox.activo{
+    display: flex;
+}
